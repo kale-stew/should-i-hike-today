@@ -1,0 +1,20 @@
+body, html {
+  height: 100%;
+  border: 1px solid white;
+}
+
+@keyframes bigger {
+  from {font-size: 4px;}
+  to {font-size: 30px;}
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  animation-name: bigger;
+  animation-duration: 4s;
+}

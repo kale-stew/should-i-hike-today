@@ -65,6 +65,7 @@ export default class Utah extends Component {
               <option value="84742" className="3">Kanarraville Falls</option>
               <option value="84764" className="2">Bryce Canyon National Park</option>
               <option value="84532" className="1">Arches National Park</option>
+              <option value="" ></option>
               </select>
           </div>
         </div>

@@ -1,9 +1,9 @@
 # Should I hike today?
 
-## For the _live_ version, click [here](https://should-i-hike.now.sh/#/)
+## For the live version, click [here](https://should-i-hike.now.sh/#/)
 
 ## What does this app do?
-- renders a new hero image based on `res.data` received from an axios call to the Wundergroud API
+- renders a new hero image based on `res.data` received from an `axios` call to the Wundergroud API
 - hero image for 'yes' and 'no'
 - multiple National Park options for each state's view
 
@@ -22,8 +22,17 @@
 - `body-parser` to parse the API response
 
 ## final product:
-2. 'Yes!' Change
-![go-for-it]()
+- Landing Navigation
+![functional-landing-navigation](https://github.com/kale-stew/should-i-hike-today/blob/master/README-assets/landing.gif)
 
-3. 'No, sorry' Change
-![sorry-no]()
+- Arizona
+![functional-arizona-logic](https://github.com/kale-stew/should-i-hike-today/blob/master/README-assets/arizona.gif)
+
+- California
+![functional-california-logic](https://github.com/kale-stew/should-i-hike-today/blob/master/README-assets/california.gif)
+
+- Colorado
+![functional-colorado-logic](https://github.com/kale-stew/should-i-hike-today/blob/master/README-assets/colorado.gif)
+
+- Utah
+![functional-utah-logic](https://github.com/kale-stew/should-i-hike-today/blob/master/README-assets/utah.gif)

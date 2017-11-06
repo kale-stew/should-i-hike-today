@@ -30,13 +30,13 @@ class Landing extends Component {
           <p>Depends on where you want to go... </p>
           <div className="state-container">
             <div className="state">
-              <Link to="/CO">
-                <img src="https://image.ibb.co/cQ0CCb/co_outline.png" alt="co outline" border="0" />
+              <Link to="/CA">
+                <img src="https://image.ibb.co/dv18kw/ca_outline.png" alt="ca outline" border="0" />
               </Link>
             </div>
             <div className="state">
-              <Link to="/CA">
-                <img src="https://image.ibb.co/dv18kw/ca_outline.png" alt="ca outline" border="0" />
+              <Link to="/CO">
+                <img src="https://image.ibb.co/cQ0CCb/co_outline.png" alt="co outline" border="0" />
               </Link>
             </div>
             <div className="state">

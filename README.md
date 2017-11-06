@@ -14,7 +14,7 @@
 - more specific location data, down to the GPS coordinates of popular trailheads
 
 ## Tech Stack:
-- `axzios` to fetch Wunderground's public weather data
+- `axios` to fetch Wunderground's public weather data
 - `react.js` framework
 - `react-router-dom` for navigation 
 - `body-parser` to parse the API response

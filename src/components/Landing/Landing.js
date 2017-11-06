@@ -27,7 +27,7 @@ class Landing extends Component {
       <div style={styles.backgroundStyle}> 
         <div className="hero-text" style={{ position: 'fixed' }}>
           <h1 style={{ marginTop: '50px' }}>Should I hike today?</h1>
-          <p>Depends on where you want to go... </p>
+          <h2>Depends on where you want to go... </h2>
           <div className="state-container">
             <div className="state">
               <Link to="/CA">

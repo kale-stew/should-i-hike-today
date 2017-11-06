@@ -1,0 +1,41 @@
+.state-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.616);
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    padding-top: 4px;
+}
+
+.state {
+    padding: 0px 35px 0px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:link {
+    color: black;
+    text-decoration: none;
+}
+
+:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.state:hover {
+    color: black;
+}
+
+:active {
+    color: black;
+    text-decoration: none;
+}

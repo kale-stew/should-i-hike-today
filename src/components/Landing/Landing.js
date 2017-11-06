@@ -1,41 +1,55 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import page from '../hero-yes.png';
+require('./Landing.css');
 
 class Landing extends Component {
     constructor() {
     super();
     this.state = {
         background: page
-      };
+      }
     }
 
   render () {
-    var backgroundStyle = {
-      backgroundImage: "url(" + this.state.background + ")",
-      height: "100vh",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      position: "relative"
-    };
+    var styles = {
+      backgroundStyle: {
+        backgroundImage: "url(" + this.state.background + ")",
+        height: "100vh",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        position: "relative"
+      }
+    }
 
     return (
-      <div style={backgroundStyle}> 
-        <div className="hero-text">
+      <div style={styles.backgroundStyle}> 
+        <div className="hero-text" style={{ position: 'fixed' }}>
           <h1>Should I hike today?</h1>
           <p>Depends on where you want to go... </p>
-          <select> 
-            <option default>Pick a state...</option>
-            <Link to='/AZ' className='landing_Arizona-link'>Arizona
-                <option className="AZ">Arizona</option></Link>
-            <Link to='/CA' className='landing_California-link'>
-                <option className="CA">California</option></Link>
-            <Link to='/CO' className='landing_Colorado-link'>
-                <option className="CO">Colorado</option></Link>
-            <Link to='/UT' className='landing_Utah-link'>
-            <option className="UT">Utah</option></Link>
-          </select>
+          <div className="state-container">
+            <div className="state">
+              <Link to="/CO">
+                <img src="https://image.ibb.co/cQ0CCb/co_outline.png" alt="co outline" border="0" />
+              </Link>
+            </div>
+            <div className="state">
+              <Link to="/CA">
+                <img src="https://image.ibb.co/dv18kw/ca_outline.png" alt="ca outline" border="0" />
+              </Link>
+            </div>
+            <div className="state">
+              <Link to="/AZ">
+                <img src="https://image.ibb.co/fyhEQw/az_outline.png" alt="az outline" border="0" />
+              </Link>
+            </div>
+            <div className="state">
+              <Link to="/UT">
+                <img src="https://image.ibb.co/fkfqyG/ut_outline.png" alt="ut outline" border="0" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     )

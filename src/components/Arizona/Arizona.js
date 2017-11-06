@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import landingPage from './laura-colquitt.jpg';
-import heroYes from './jasper-van-der-meij.jpg';
-import heroNo from './luca-bravo.jpg';
 import getWeather from '../../services/wunderAPI';
 
 class Arizona extends Component {
@@ -11,7 +8,7 @@ class Arizona extends Component {
         weather: "",
         temp: 0,
         precip: 0,
-        background: landingPage,
+        background: 'https://image.ibb.co/h8SsCb/laura_colquitt.jpg',
         displayHeader: 'Arizona',
         displayText: 'Select a park:'
       };
@@ -33,14 +30,14 @@ class Arizona extends Component {
       // if desired conditions are met, the background img updates to heroYes
       if (desiredConditions()) {
           this.setState({
-            background: heroYes,
+            background: 'https://image.ibb.co/mKJokw/jasper_van_der_meij.jpg',
             displayHeader: 'Go for it!',
             displayText: 'Looking good! Enjoy your hike.'
           })
       // if desired conditions are not met, the background img updates to heroNo
         } else {
           this.setState({
-            background: heroNo,
+            background: 'https://image.ibb.co/jEkOJG/luca_bravo.jpg',
             displayHeader: "It's a no from me.",
             displayText: 'Sorry. Try again tomorrow!'
           })

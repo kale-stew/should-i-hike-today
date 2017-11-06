@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import landingPage from './vladimir-kudinov.jpg';
+import landingPage from './connor-robertson.jpg';
 import heroYes from './cam-adams.jpg';
 import heroNo from './laura-agusti.jpg';
 import getWeather from '../../services/wunderAPI';
@@ -11,7 +11,9 @@ export default class California extends Component {
           temp: 0,
           wind: "",
           precip: 0,
-          background: landingPage
+          background: landingPage,
+          displayHeader: 'California',
+          displayText: 'Select a park:'
         };
       }
   
@@ -31,12 +33,16 @@ export default class California extends Component {
         // if desired conditions are met, the background img updates to heroYes
         if (desiredConditions()) {
             this.setState({
-              background: heroYes
+              background: heroYes,
+              displayHeader: 'Looking good!',
+              displayText: 'The weather looks beautiful! Enjoy your hike.'
             })
         // if desired conditions are not met, the background img updates to heroNo
           } else {
             this.setState({
-              background: heroNo
+              background: heroNo,
+              displayHeader: "I wouldn't reccommend it.",
+              displayText: 'Sorry. Try again tomorrow!'
             })
           }
       })
@@ -55,9 +61,9 @@ export default class California extends Component {
       return (
         <div style={backgroundStyle}> 
           <div className="hero-text">
-            <h1>California</h1>
-            <p>Pick a hike!</p>
-            <select onChange={ (e)=> {this.handleSelect(e)} } > 
+            <h1>{this.state.displayHeader}</h1>
+            <h3 style={{ marginTop: '65px' }}>{this.state.displayText}</h3>
+              <select onChange={ (e)=> {this.handleSelect(e)} } > 
                 <option default>Pick a park...</option>
                 <option value="92277" className="5">Joshua Tree National Park</option>
                 <option value="95531" className="4">Redwood National Park</option>
@@ -65,8 +71,8 @@ export default class California extends Component {
                 <option value="96063" className="2">Lassen Volcanic National Park</option>
                 <option value="94937" className="1">Point Reyes National Seashore</option>
                 <option value="93001" className="5">Channel Islands National Park</option>
-            </select>
-        </div>
+              </select>
+          </div>
         </div>
       )
     }

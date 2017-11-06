@@ -11,7 +11,9 @@ class Arizona extends Component {
         weather: "",
         temp: 0,
         precip: 0,
-        background: landingPage
+        background: landingPage,
+        displayHeader: 'Arizona',
+        displayText: 'Select a park:'
       };
     }
 
@@ -31,12 +33,16 @@ class Arizona extends Component {
       // if desired conditions are met, the background img updates to heroYes
       if (desiredConditions()) {
           this.setState({
-            background: heroYes
+            background: heroYes,
+            displayHeader: 'Go for it!',
+            displayText: 'Looking good! Enjoy your hike.'
           })
       // if desired conditions are not met, the background img updates to heroNo
         } else {
           this.setState({
-            background: heroNo
+            background: heroNo,
+            displayHeader: "It's a no from me.",
+            displayText: 'Sorry. Try again tomorrow!'
           })
         }
     })
@@ -55,8 +61,8 @@ class Arizona extends Component {
     return (
       <div style={backgroundStyle}> 
         <div className="hero-text">
-          <h1>Arizona</h1>
-          <p>Pick a hike!</p>
+          <h1>{this.state.displayHeader}</h1>
+          <h3 style={{ marginTop: '65px' }}>{this.state.displayText}</h3>
             <select onChange={ (e)=> {this.handleSelect(e)} } > 
                 <option default>Pick a park...</option>
                 <option value="86023" className="5">Grand Canyon National Park</option>

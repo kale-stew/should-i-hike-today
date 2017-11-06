@@ -12,7 +12,9 @@ export default class Utah extends Component {
           wind: 0,
           temp: 0,
           precip: 0,
-          background: landingPage
+          background: landingPage,
+          displayHeader: 'Utah',
+          displayText: 'Select a park:'
         };
       }
   
@@ -32,12 +34,16 @@ export default class Utah extends Component {
         // if desired conditions are met, the background img updates to heroYes
         if (desiredConditions()) {
             this.setState({
-              background: heroYes
+              background: heroYes,
+              displayHeader: 'Have a great hike!',
+              displayText: 'Enjoy that beautiful Utah sunshine today.'
             })
         // if desired conditions are not met, the background img updates to heroNo
           } else {
             this.setState({
-              background: heroNo
+              background: heroNo,
+              displayHeader: "I would advise against it.",
+              displayText: "The weather doesn't look so good there today. Check back in tomorrow."
             })
           }
       })
@@ -56,16 +62,15 @@ export default class Utah extends Component {
       return (
         <div style={backgroundStyle}> 
           <div className="hero-text">
-            <h1 className="h1">Utah</h1>
-            <p>Pick a park!</p>
-            <select onChange={ (e)=> {this.handleSelect(e)} } > 
-              <option default>Pick a park...</option>
-              <option value="84741" className="5">The Wave</option>
-              <option value="84767" className="4">Zion National Park</option>
-              <option value="84742" className="3">Kanarraville Falls</option>
-              <option value="84764" className="2">Bryce Canyon National Park</option>
-              <option value="84532" className="1">Arches National Park</option>
-              <option value="" ></option>
+            <h1>{this.state.displayHeader}</h1>
+            <h3 style={{ marginTop: '65px' }}>{this.state.displayText}</h3>
+              <select onChange={ (e)=> {this.handleSelect(e)} } > 
+                <option default>Pick a park...</option>
+                <option value="84741" className="5">The Wave</option>
+                <option value="84767" className="4">Zion National Park</option>
+                <option value="84742" className="3">Kanarraville Falls</option>
+                <option value="84764" className="2">Bryce Canyon National Park</option>
+                <option value="84532" className="1">Arches National Park</option>
               </select>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import landingPage from './jeremy-bishop.jpg';
-import heroYes from './patrick-van-stee.png';
-import heroNo from './john-price.png';
+import heroYes from './kait-herzog.jpg';
+import heroNo from './andrea-casali.jpg';
 // import './david-rupert.jpg';
 import getWeather from '../../services/wunderAPI';
 
@@ -12,7 +12,9 @@ export default class Colorado extends Component {
           wind: 0,
           temp: 0,
           precip: 0,
-          background: landingPage
+          background: landingPage,
+          displayHeader: 'Colorado',
+          displayText: 'Select a park:'
         };
       }
   
@@ -32,12 +34,16 @@ export default class Colorado extends Component {
         // if desired conditions are met, the background img updates to heroYes
         if (desiredConditions()) {
             this.setState({
-              background: heroYes
+              background: heroYes,
+              displayHeader: 'Two thumbs up.',
+              displayText: 'Have a great time!'
             })
         // if desired conditions are not met, the background img updates to heroNo
           } else {
             this.setState({
-              background: heroNo
+              background: heroNo,
+              displayHeader: "Rain check, please.",
+              displayText: 'It looks a little stormy today. Maybe tomorrow?'
             })
           }
       })
@@ -56,8 +62,8 @@ export default class Colorado extends Component {
       return (
         <div style={backgroundStyle}> 
           <div className="hero-text">
-            <h1>Colorado</h1>
-            <p>Pick a park!</p>
+            <h1>{this.state.displayHeader}</h1>
+            <h3 style={{ marginTop: '65px' }}>{this.state.displayText}</h3>
             <select onChange={ (e)=> {this.handleSelect(e)} } > 
                 <option default>Pick a park...</option>
                 <option value="81330" className="5">Mesa Verde National Park</option>

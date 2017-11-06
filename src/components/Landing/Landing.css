@@ -1,6 +1,10 @@
 .state-container {
     display: flex;
+    height: 130px;
+    width: 680px;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin-top: 100px;
     position: relative;
     padding: 20px;
@@ -11,31 +15,31 @@
 img {
     height: 100px;
     width: 100px;
-    padding-top: 4px;
 }
 
 .state {
-    padding: 0px 35px 0px 35px;
+    padding: 0px 40px 0px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 :link {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 :visited {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
-.state:hover {
-    color: black;
+img:hover {
+    color: white;
+    height: 115px;
 }
 
 :active {
-    color: black;
+    color: white;
     text-decoration: none;
 }

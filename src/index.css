@@ -3,3 +3,11 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+h1 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 24px;
+}

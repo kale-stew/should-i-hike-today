@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import page from '../hero-yes.png';
 require('./Landing.css');
 
 class Landing extends Component {
     constructor() {
     super();
     this.state = {
-        background: page
+        background: 'http://image.ibb.co/mhzNCb/kalen_emsley.jpg'
       }
     }
 

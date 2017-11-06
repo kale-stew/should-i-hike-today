@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import landingPage from './jeremy-bishop.jpg';
-import heroYes from './kait-herzog.jpg';
-import heroNo from './andrea-casali.jpg';
-// import './david-rupert.jpg';
 import getWeather from '../../services/wunderAPI';
 
 export default class Colorado extends Component {
@@ -12,7 +8,7 @@ export default class Colorado extends Component {
           wind: 0,
           temp: 0,
           precip: 0,
-          background: landingPage,
+          background: 'http://image.ibb.co/iRv15w/jeremy_bishop.jpg',
           displayHeader: 'Colorado',
           displayText: 'Select a park:'
         };
@@ -34,14 +30,14 @@ export default class Colorado extends Component {
         // if desired conditions are met, the background img updates to heroYes
         if (desiredConditions()) {
             this.setState({
-              background: heroYes,
+              background: 'http://image.ibb.co/kFiokw/kait_herzog.jpg',
               displayHeader: 'Two thumbs up.',
               displayText: 'Have a great time!'
             })
         // if desired conditions are not met, the background img updates to heroNo
           } else {
             this.setState({
-              background: heroNo,
+              background: 'http://image.ibb.co/gx0qyG/andrea_casali.jpg',
               displayHeader: "Rain check, please.",
               displayText: 'It looks a little stormy today. Maybe tomorrow?'
             })

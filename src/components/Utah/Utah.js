@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import landingPage from './pedro-lastra.jpg';
-import heroYes from './fineas-anton.jpg';
-import heroNo from './claudel-rheault.jpg';
-// import './jacob-ufkes.jpg';
 import getWeather from '../../services/wunderAPI';
 
 export default class Utah extends Component {
@@ -12,7 +8,7 @@ export default class Utah extends Component {
           wind: 0,
           temp: 0,
           precip: 0,
-          background: landingPage,
+          background: 'http://image.ibb.co/gyUiJG/jacob_ufkes.jpg',
           displayHeader: 'Utah',
           displayText: 'Select a park:'
         };
@@ -34,14 +30,14 @@ export default class Utah extends Component {
         // if desired conditions are met, the background img updates to heroYes
         if (desiredConditions()) {
             this.setState({
-              background: heroYes,
+              background: 'http://image.ibb.co/dqH3JG/pedro_lastra.jpg',
               displayHeader: 'Have a great hike!',
               displayText: 'Enjoy that beautiful Utah sunshine today.'
             })
         // if desired conditions are not met, the background img updates to heroNo
           } else {
             this.setState({
-              background: heroNo,
+              background: 'http://image.ibb.co/bTiM5w/claudel_rheault.jpg',
               displayHeader: "I would advise against it.",
               displayText: "The weather doesn't look so good there today. Check back in tomorrow."
             })

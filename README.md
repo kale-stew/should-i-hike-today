@@ -21,7 +21,7 @@
 - `react-router-dom` for navigation 
 - `body-parser` to parse the API response
 
-## final product:
+## Final Product:
 - Landing Navigation
 ![functional-landing-navigation](https://github.com/kale-stew/should-i-hike-today/blob/master/README-assets/landing.gif)
 

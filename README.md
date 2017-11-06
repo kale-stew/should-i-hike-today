@@ -1,5 +1,7 @@
 # Should I hike today?
 
+## For the _live_ version, click [here](https://should-i-hike.now.sh/#/)
+
 ## What does this app do?
 - renders a new hero image based on `res.data` received from an axios call to the Wundergroud API
 - hero image for 'yes' and 'no'
@@ -20,9 +22,6 @@
 - `body-parser` to parse the API response
 
 ## final product:
-1. Navigation between states
-![navigation]()
-
 2. 'Yes!' Change
 ![go-for-it]()
 

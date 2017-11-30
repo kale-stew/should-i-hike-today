@@ -14,6 +14,7 @@
 
 ## Upcoming Features:
 - more specific location data, down to the GPS coordinates of popular trailheads
+- **WIP**: implement `sockets.io` to render a live feed of hiking data pertinent to that state, brought to you by my hand-built `node/twit` bots
 
 ## Tech Stack:
 - `axios` to fetch Wunderground's public weather data

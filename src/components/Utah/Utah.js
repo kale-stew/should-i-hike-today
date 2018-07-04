@@ -25,7 +25,7 @@ export default class Utah extends Component {
           if (temp < 35 || wind > 5.5 || precip > 3) {
             return false;
           } else return true;
-        }
+        };
         
         // if desired conditions are met, the background img updates to heroYes
         if (desiredConditions()) {
@@ -33,26 +33,26 @@ export default class Utah extends Component {
               background: 'http://image.ibb.co/dqH3JG/pedro_lastra.jpg',
               displayHeader: 'Have a great hike!',
               displayText: 'Enjoy that beautiful Utah sunshine today.'
-            })
+            });
         // if desired conditions are not met, the background img updates to heroNo
           } else {
             this.setState({
               background: 'http://image.ibb.co/bTiM5w/claudel_rheault.jpg',
-              displayHeader: "I would advise against it.",
-              displayText: "The weather doesn't look so good there today. Check back in tomorrow."
-            })
+              displayHeader: 'I would advise against it.',
+              displayText: 'The weather doesn\'t look so good there today. Check back in tomorrow.'
+            });
           }
-      })
-    };
+      });
+    }
   
-    render () {
+    render() {
       var backgroundStyle = {
-        backgroundImage: "url(" + this.state.background + ")",
-        height: "100vh",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        position: "relative"
+        backgroundImage: 'url(' + this.state.background + ')',
+        height: '100vh',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        position: 'relative'
       };
   
       return (
@@ -60,7 +60,7 @@ export default class Utah extends Component {
           <div className="hero-text">
             <h1>{this.state.displayHeader}</h1>
             <h3 style={{ marginTop: '65px' }}>{this.state.displayText}</h3>
-              <select onChange={ (e)=> {this.handleSelect(e)} } > 
+              <select onChange={ (e)=> {this.handleSelect(e);} } > 
                 <option default>Pick a park...</option>
                 <option value="84741" className="5">The Wave</option>
                 <option value="84767" className="4">Zion National Park</option>
@@ -70,6 +70,6 @@ export default class Utah extends Component {
               </select>
           </div>
         </div>
-      )
+      );
     }
-  };
+  }

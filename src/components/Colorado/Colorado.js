@@ -25,7 +25,7 @@ export default class Colorado extends Component {
           if (wind > 4 || temp < 30 || precip > 3) {
             return false;
           } else return true;
-        }
+        };
         
         // if desired conditions are met, the background img updates to heroYes
         if (desiredConditions()) {
@@ -33,26 +33,26 @@ export default class Colorado extends Component {
               background: 'http://image.ibb.co/kFiokw/kait_herzog.jpg',
               displayHeader: 'Two thumbs up.',
               displayText: 'Have a great time!'
-            })
+            });
         // if desired conditions are not met, the background img updates to heroNo
           } else {
             this.setState({
               background: 'http://image.ibb.co/gx0qyG/andrea_casali.jpg',
-              displayHeader: "Rain check, please.",
+              displayHeader: 'Rain check, please.',
               displayText: 'It looks a little stormy today. Maybe tomorrow?'
-            })
+            });
           }
-      })
-    };
+      });
+    }
   
-    render () {
+    render() {
       var backgroundStyle = {
-        backgroundImage: "url(" + this.state.background + ")",
-        height: "100vh",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        position: "relative"
+        backgroundImage: 'url(' + this.state.background + ')',
+        height: '100vh',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        position: 'relative'
       };
   
       return (
@@ -60,7 +60,7 @@ export default class Colorado extends Component {
           <div className="hero-text">
             <h1>{this.state.displayHeader}</h1>
             <h3 style={{ marginTop: '65px' }}>{this.state.displayText}</h3>
-            <select onChange={ (e)=> {this.handleSelect(e)} } > 
+            <select onChange={ (e)=> {this.handleSelect(e);} } > 
                 <option default>Pick a park...</option>
                 <option value="81330" className="5">Mesa Verde National Park</option>
                 <option value="80517" className="4">Rocky Mountain National Park</option>
@@ -70,6 +70,6 @@ export default class Colorado extends Component {
             </select>
           </div>
         </div>
-      )
+      );
     }
-  };
+  }

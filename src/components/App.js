@@ -2,7 +2,7 @@ import React from 'react';
 import router from '../router';
 import './App.css';
 
-export function App( { children } ) {
+export function App() {
   return (
     <div className="app">
       { router }

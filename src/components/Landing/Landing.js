@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-require('./Landing.css');
+import './Landing.css';
 
 class Landing extends Component {
     constructor() {
     super();
     this.state = {
         background: 'http://image.ibb.co/mhzNCb/kalen_emsley.jpg'
-      }
+      };
     }
 
-  render () {
+  render() {
     var styles = {
       backgroundStyle: {
-        backgroundImage: "url(" + this.state.background + ")",
-        height: "100vh",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        position: "relative"
+        backgroundImage: 'url(' + this.state.background + ')',
+        height: '100vh',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        position: 'relative'
       }
-    }
+    };
 
     return (
       <div style={styles.backgroundStyle}> 
@@ -51,7 +51,7 @@ class Landing extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -18,11 +18,24 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "now --public -d"
   },
   "now": {
-    "alias":"should-i-hike"
+    "alias": "should-i-hike"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.2",
+    "eslint-config-formidable": "^3.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-loader": "^1.8.0",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "eslint-plugin-react": "^7.10.0"
   }
 }
